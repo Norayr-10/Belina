@@ -1,0 +1,150 @@
+.container {
+  width: 100%;
+  height: 50px;
+  background-color: black;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.left_A {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  color: white;
+}
+
+.phone {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 25%;
+  color: white;
+}
+
+.left {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.icons {
+  color: white;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: color 0.3s, font-size 0.3s;
+}
+
+.icons:hover {
+  color: yellow;
+  font-size: 26px;
+}
+
+.right {
+  display: none;
+}
+
+.menuButton {
+  display: none;
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 28px;
+}
+
+.menuButton:hover {
+  color: yellow;
+}
+
+.fullScreenMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  transition: opacity 0.3s ease;
+}
+
+.fullScreenMenu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-size: 24px;
+}
+
+.fullScreenMenu li {
+  padding: 20px 0;
+}
+
+.fullScreenMenu a {
+  color: white;
+  text-decoration: none;
+}
+
+.fullScreenMenu a:hover {
+  color: yellow;
+}
+
+.closeButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media (max-width: 1050px) {
+  .container {
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    position: relative;
+  }
+  .icons {
+    display: none;
+  }
+
+  .menuButton {
+    display: block;
+  }
+
+  .right {
+    display: flex;
+    align-items: center;
+  }
+
+  .left_A {
+    display: none;
+  }
+
+  .left {
+    display: none;
+  }
+
+  .fullScreenMenu {
+    display: flex;
+  }
+}
